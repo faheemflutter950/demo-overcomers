@@ -77,26 +77,54 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 1.125rem;
+
+  /* World Overcomers brand palette */
+  --ink: oklch(0.219 0.021 251.5);
+  --ink-deep: oklch(0.183 0.019 251.5);
+  --brand-red: oklch(0.567 0.207 30.2);
+  --brand-red-hover: oklch(0.505 0.19 30.2);
+  --brand-blue: oklch(0.657 0.132 251.4);
+  --brand-blue-hover: oklch(0.585 0.135 251.4);
+  --surface-mist: oklch(0.972 0.003 250);
+  --on-ink: oklch(1 0 0);
+
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: var(--ink);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: var(--ink);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: var(--ink);
+  --primary: var(--brand-red);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--surface-mist);
+  --secondary-foreground: var(--ink);
+  --muted: var(--surface-mist);
+  --muted-foreground: oklch(0.52 0.014 251);
+  --accent: var(--brand-blue);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.925 0.004 250);
+  --input: oklch(0.925 0.004 250);
+  --ring: var(--brand-blue);
+
+  /* Hero + surface treatments */
+  --hero-scrim: linear-gradient(
+    180deg,
+    oklch(0.219 0.021 251.5 / 0.45) 0%,
+    oklch(0.219 0.021 251.5 / 0.15) 30%,
+    oklch(0.219 0.021 251.5 / 0.92) 100%
+  );
+  --hero-scrim-side: linear-gradient(
+    90deg,
+    oklch(0.219 0.021 251.5 / 0.82) 0%,
+    oklch(0.219 0.021 251.5 / 0.08) 62%
+  );
+  --gradient-red: linear-gradient(135deg, var(--brand-red), oklch(0.63 0.19 40));
+  --shadow-card: 0 1px 3px oklch(0.219 0.021 251.5 / 0.08);
+  --shadow-lift: 0 18px 40px -18px oklch(0.219 0.021 251.5 / 0.35);
+
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
