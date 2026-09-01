@@ -14,6 +14,9 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as MessagesRouteImport } from './routes/messages'
 import { Route as VisitRouteImport } from './routes/visit'
+import { Route as ConnectBelongGroupsRouteImport } from './routes/connect.belong-groups'
+import { Route as ConnectBlackBusinessDirectoryRouteImport } from './routes/connect.black-business-directory'
+import { Route as ConnectMinistriesRouteImport } from './routes/connect.ministries'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +43,22 @@ const VisitRoute = VisitRouteImport.update({
   path: '/visit',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConnectBelongGroupsRoute = ConnectBelongGroupsRouteImport.update({
+  id: '/connect/belong-groups',
+  path: '/connect/belong-groups',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConnectBlackBusinessDirectoryRoute =
+  ConnectBlackBusinessDirectoryRouteImport.update({
+    id: '/connect/black-business-directory',
+    path: '/connect/black-business-directory',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ConnectMinistriesRoute = ConnectMinistriesRouteImport.update({
+  id: '/connect/ministries',
+  path: '/connect/ministries',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +66,9 @@ export interface FileRoutesByFullPath {
   '/events': typeof EventsRoute
   '/messages': typeof MessagesRoute
   '/visit': typeof VisitRoute
+  '/connect/belong-groups': typeof ConnectBelongGroupsRoute
+  '/connect/black-business-directory': typeof ConnectBlackBusinessDirectoryRoute
+  '/connect/ministries': typeof ConnectMinistriesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +76,9 @@ export interface FileRoutesByTo {
   '/events': typeof EventsRoute
   '/messages': typeof MessagesRoute
   '/visit': typeof VisitRoute
+  '/connect/belong-groups': typeof ConnectBelongGroupsRoute
+  '/connect/black-business-directory': typeof ConnectBlackBusinessDirectoryRoute
+  '/connect/ministries': typeof ConnectMinistriesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +87,41 @@ export interface FileRoutesById {
   '/events': typeof EventsRoute
   '/messages': typeof MessagesRoute
   '/visit': typeof VisitRoute
+  '/connect/belong-groups': typeof ConnectBelongGroupsRoute
+  '/connect/black-business-directory': typeof ConnectBlackBusinessDirectoryRoute
+  '/connect/ministries': typeof ConnectMinistriesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/events' | '/messages' | '/visit'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/events'
+    | '/messages'
+    | '/visit'
+    | '/connect/belong-groups'
+    | '/connect/black-business-directory'
+    | '/connect/ministries'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/events' | '/messages' | '/visit'
-  id: '__root__' | '/' | '/about' | '/events' | '/messages' | '/visit'
+  to:
+    | '/'
+    | '/about'
+    | '/events'
+    | '/messages'
+    | '/visit'
+    | '/connect/belong-groups'
+    | '/connect/black-business-directory'
+    | '/connect/ministries'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/events'
+    | '/messages'
+    | '/visit'
+    | '/connect/belong-groups'
+    | '/connect/black-business-directory'
+    | '/connect/ministries'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,6 +130,9 @@ export interface RootRouteChildren {
   EventsRoute: typeof EventsRoute
   MessagesRoute: typeof MessagesRoute
   VisitRoute: typeof VisitRoute
+  ConnectBelongGroupsRoute: typeof ConnectBelongGroupsRoute
+  ConnectBlackBusinessDirectoryRoute: typeof ConnectBlackBusinessDirectoryRoute
+  ConnectMinistriesRoute: typeof ConnectMinistriesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -116,6 +172,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VisitRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/connect/belong-groups': {
+      id: '/connect/belong-groups'
+      path: '/connect/belong-groups'
+      fullPath: '/connect/belong-groups'
+      preLoaderRoute: typeof ConnectBelongGroupsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/connect/black-business-directory': {
+      id: '/connect/black-business-directory'
+      path: '/connect/black-business-directory'
+      fullPath: '/connect/black-business-directory'
+      preLoaderRoute: typeof ConnectBlackBusinessDirectoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/connect/ministries': {
+      id: '/connect/ministries'
+      path: '/connect/ministries'
+      fullPath: '/connect/ministries'
+      preLoaderRoute: typeof ConnectMinistriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -125,6 +202,9 @@ const rootRouteChildren: RootRouteChildren = {
   EventsRoute: EventsRoute,
   MessagesRoute: MessagesRoute,
   VisitRoute: VisitRoute,
+  ConnectBelongGroupsRoute: ConnectBelongGroupsRoute,
+  ConnectBlackBusinessDirectoryRoute: ConnectBlackBusinessDirectoryRoute,
+  ConnectMinistriesRoute: ConnectMinistriesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
