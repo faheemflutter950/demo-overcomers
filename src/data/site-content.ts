@@ -1,0 +1,153 @@
+import hangOn from "@/assets/sermon-hang-on.jpg.asset.json";
+import hotWater from "@/assets/sermon-hot-water.jpg.asset.json";
+import talkIt from "@/assets/sermon-talk-it.jpg.asset.json";
+
+export const church = {
+  name: "World Overcomers Christian Church",
+  short: "WOCC",
+  tagline: "Balanced Victory For The God Designed Life",
+  address1: "2933 S Miami Blvd, Suite 101",
+  address2: "Durham, NC 27703",
+  phone: "(919) 402-9622",
+  email: "contact@wocconline.org",
+  serviceTime: "Sundays · 10:00AM",
+} as const;
+
+export const messages = [
+  {
+    title: "Hang On, God is Moving",
+    date: "June 14, 2026",
+    speaker: "Pastor Andy Thompson",
+    image: hangOn.url,
+    excerpt:
+      "In Habakkuk 2:2-4 and Exodus 13:17-22, we are reminded that God is still working even when the wait feels long.",
+  },
+  {
+    title: "There's No Hot Water",
+    date: "June 7, 2026",
+    speaker: "Pastor Andy Thompson",
+    image: hotWater.url,
+    excerpt:
+      "A powerful message challenging us to examine the source of what truly sustains us through dry seasons.",
+  },
+  {
+    title: "Talk it Like You Walk it",
+    date: "May 31, 2026",
+    speaker: "Pastor Andy Thompson",
+    image: talkIt.url,
+    excerpt:
+      "Drawing from Matthew 6:9-13 and the Parable of the Two Sons — letting our walk match our words.",
+  },
+] as const;
+
+export const events = [
+  {
+    month: "Jun",
+    day: "21",
+    weekday: "Sunday",
+    tag: "Celebration",
+    title: "Father's Day Celebration",
+    body: "Honoring the fathers and father-figures of our family with a special Worship Experience and a gift for every dad.",
+    time: "10:00AM",
+    place: "Main Auditorium",
+    cta: "RSVP",
+    category: "Worship",
+  },
+  {
+    month: "Jun",
+    day: "27",
+    weekday: "Friday",
+    tag: "Worship",
+    title: "Summer Night of Worship",
+    body: "An evening of unfiltered praise with our worship team and special guest musicians. Bring a friend.",
+    time: "7:00PM",
+    place: "Main Auditorium",
+    cta: "Details",
+    category: "Worship",
+  },
+  {
+    month: "Jul",
+    day: "11",
+    weekday: "Saturday",
+    tag: "Men's Ministry",
+    title: "Men's Breakfast & Brotherhood",
+    body: "Food, fellowship, and a candid conversation about leading well at home, at work, and in faith.",
+    time: "8:30AM",
+    place: "Fellowship Hall",
+    cta: "Register",
+    category: "Groups",
+  },
+  {
+    month: "Jul",
+    day: "13",
+    weekday: "Monday",
+    tag: "Kids",
+    title: "Vacation Bible School",
+    body: "A high-energy week of games, music, and Bible adventures for kids ages 4–12. Free to attend.",
+    time: "9:00AM–3:00PM",
+    place: "Kids Wing",
+    cta: "Sign Up",
+    category: "Kids & Youth",
+  },
+  {
+    month: "Jul",
+    day: "25",
+    weekday: "Saturday",
+    tag: "Women's Ministry",
+    title: "Women of Worth Brunch",
+    body: "A morning of encouragement, worship, and connection for the women of WOCC and their guests.",
+    time: "10:00AM",
+    place: "Fellowship Hall",
+    cta: "Register",
+    category: "Groups",
+  },
+  {
+    month: "Aug",
+    day: "01",
+    weekday: "Saturday",
+    tag: "Outreach",
+    title: "Community Serve Day",
+    body: "We take the church to the streets of Durham — meals, supplies, and prayer for our neighbors.",
+    time: "9:00AM",
+    place: "Meet at Church",
+    cta: "Volunteer",
+    category: "Outreach",
+  },
+  {
+    month: "Aug",
+    day: "08",
+    weekday: "Friday",
+    tag: "Marriage",
+    title: "Marriage Enrichment Date Night",
+    body: "A guided evening for couples — dinner, a fun activity, and tools to strengthen your relationship.",
+    time: "6:30PM",
+    place: "Fellowship Hall",
+    cta: "Reserve",
+    category: "Groups",
+  },
+  {
+    month: "Aug",
+    day: "16",
+    weekday: "Sunday",
+    tag: "Baptism",
+    title: "Baptism Sunday",
+    body: "Take your next step of faith and go public with your decision. Register or just show up ready.",
+    time: "10:00AM",
+    place: "Main Auditorium",
+    cta: "Sign Up",
+    category: "Worship",
+  },
+] as const;
+
+export const eventFilters = ["All Events", "Worship", "Kids & Youth", "Outreach", "Groups"] as const;
+
+export const ministries = [
+  { name: "Men", body: "Brotherhood, accountability, and a call to lead well at home and at work." },
+  { name: "Women", body: "Encouragement, worship, and sisterhood for every season of life." },
+  { name: "Youth", body: "Middle and high schoolers building real faith with real friends." },
+  { name: "Kids", body: "Safe, fun, age-specific environments where kids meet Jesus." },
+  { name: "Marriage", body: "Practical tools and community for dating, engaged, and married couples." },
+  { name: "Outreach", body: "Serving Durham with meals, supplies, and prayer all year long." },
+  { name: "Worship", body: "Musicians, vocalists, and production serving the Worship Experience." },
+  { name: "Counseling", body: "Professional, faith-centered support for whatever you're facing." },
+] as const;
