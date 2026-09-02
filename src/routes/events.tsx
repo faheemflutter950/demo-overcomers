@@ -43,7 +43,7 @@ function EventsPage() {
         intro="Gatherings, classes, and celebrations all year long. There's always a next step — find yours below."
       />
 
-      <section className="bg-brand-red text-on-ink">
+      <section className="bg-brand-clay text-on-ink">
         <div className="shell flex flex-wrap items-center gap-x-10 gap-y-5 py-10">
           <div>
             <span className="eyebrow text-white/70">Featured · This Weekend</span>
@@ -90,13 +90,13 @@ function EventsPage() {
               <article key={e.title} className="card-soft flex flex-col border border-border p-6">
                 <div className="flex items-start gap-4">
                   <div className="flex size-16 shrink-0 flex-col items-center justify-center rounded-2xl bg-ink text-on-ink">
-                    <span className="eyebrow text-brand-blue">{e.month}</span>
+                    <span className="eyebrow text-brand-sky">{e.month}</span>
                     <span className="text-2xl leading-none font-black" style={{ fontFamily: "var(--font-display)" }}>
                       {e.day}
                     </span>
                   </div>
                   <div>
-                    <span className="eyebrow text-brand-red">{e.tag}</span>
+                    <span className="eyebrow text-brand-clay">{e.tag}</span>
                     <h3 className="display-md mt-1.5 text-foreground">{e.title}</h3>
                     <span className="text-[13px] text-muted-foreground">{e.weekday}</span>
                   </div>
@@ -104,14 +104,14 @@ function EventsPage() {
                 <p className="mt-4 flex-1 text-[15px] leading-relaxed text-muted-foreground">{e.body}</p>
                 <div className="mt-5 flex flex-wrap items-center gap-4 border-t border-border pt-4 text-[14px] text-muted-foreground">
                   <span className="flex items-center gap-1.5">
-                    <Clock className="size-4 text-brand-blue" aria-hidden /> {e.time}
+                    <Clock className="size-4 text-brand-sky" aria-hidden /> {e.time}
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <MapPin className="size-4 text-brand-blue" aria-hidden /> {e.place}
+                    <MapPin className="size-4 text-brand-sky" aria-hidden /> {e.place}
                   </span>
                   <button
                     type="button"
-                    className="ml-auto text-sm font-bold text-brand-red"
+                    className="ml-auto text-sm font-bold text-brand-clay"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
                     {e.cta} →
@@ -143,7 +143,7 @@ function EventsPage() {
                 type="email"
                 required
                 placeholder="Your email address"
-                className="w-full rounded-pill border border-white/20 bg-white/[0.06] px-5 py-4 text-[15px] text-on-ink outline-none placeholder:text-white/40 focus:border-brand-blue"
+                className="w-full rounded-pill border border-white/20 bg-white/[0.06] px-5 py-4 text-[15px] text-on-ink outline-none placeholder:text-white/40 focus:border-brand-sky"
               />
             </label>
             <button type="submit" className="btn-base btn-primary !py-4">

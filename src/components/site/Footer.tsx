@@ -42,7 +42,7 @@ export function Footer() {
           </div>
 
           <div>
-            <div className="eyebrow mb-4 text-brand-blue">Visit</div>
+            <div className="eyebrow mb-4 text-brand-sky">Visit</div>
             <div className="flex flex-col gap-3 text-[15px] text-white/75">
               {visitLinks.map((link, i) => (
                 <Link key={`${link.to}-${i}`} to={link.to} className="transition-colors hover:text-on-ink">
@@ -53,7 +53,7 @@ export function Footer() {
           </div>
 
           <div>
-            <div className="eyebrow mb-4 text-brand-blue">Connect</div>
+            <div className="eyebrow mb-4 text-brand-sky">Connect</div>
             <div className="flex flex-col gap-3 text-[15px] text-white/75">
               {connectLinks.map((link) => (
                 <Link key={link.label} to={link.to} className="transition-colors hover:text-on-ink">
@@ -64,7 +64,7 @@ export function Footer() {
           </div>
 
           <div>
-            <div className="eyebrow mb-4 text-brand-blue">Service Times</div>
+            <div className="eyebrow mb-4 text-brand-sky">Service Times</div>
             <div className="text-[14.5px] leading-[1.8] text-white/75">
               Sunday Worship · 10:00AM
               <br />
