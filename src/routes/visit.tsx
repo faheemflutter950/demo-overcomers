@@ -65,7 +65,7 @@ function VisitPage() {
         <div className="shell grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
           {facts.map((f) => (
             <div key={f.label} className="bg-background p-7">
-              <span className="eyebrow text-brand-sky">{f.label}</span>
+              <span className="eyebrow text-brand-clay">{f.label}</span>
               <div
                 className="mt-2 text-2xl font-extrabold text-foreground"
                 style={{ fontFamily: "var(--font-display)" }}

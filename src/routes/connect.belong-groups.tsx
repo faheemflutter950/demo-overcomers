@@ -86,13 +86,13 @@ function BelongGroupsPage() {
                 <h3 className="display-md mt-3 text-foreground">{g.name}</h3>
                 <div className="mt-5 flex flex-col gap-2 text-[15px] text-muted-foreground">
                   <span className="flex items-center gap-2">
-                    <Clock className="size-4 text-brand-sky" aria-hidden /> {g.when}
+                    <Clock className="size-4 text-brand-clay" aria-hidden /> {g.when}
                   </span>
                   <span className="flex items-center gap-2">
-                    <MapPin className="size-4 text-brand-sky" aria-hidden /> {g.where}
+                    <MapPin className="size-4 text-brand-clay" aria-hidden /> {g.where}
                   </span>
                   <span className="flex items-center gap-2">
-                    <Users className="size-4 text-brand-sky" aria-hidden /> Open to new members
+                    <Users className="size-4 text-brand-clay" aria-hidden /> Open to new members
                   </span>
                 </div>
                 <button

@@ -274,7 +274,7 @@ function Home() {
       <section className="section-y bg-background">
         <div className="shell grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <span className="eyebrow text-brand-sky">Belong Groups & Ministries</span>
+            <span className="eyebrow text-brand-clay">Belong Groups & Ministries</span>
             <h2 className="display-lg mt-3.5 mb-5 text-foreground">You weren't meant to do life alone</h2>
             <p className="mb-7 text-[17px] leading-relaxed text-muted-foreground">
               From men's and women's ministry to youth, marriage, and Belong Groups across the Triangle — there's

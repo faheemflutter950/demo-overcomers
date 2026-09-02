@@ -60,7 +60,7 @@ function EventsPage() {
             <h2 className="display-md">{featured.title}</h2>
             <p className="mt-2 text-[15px] leading-relaxed text-white/85">{featured.body}</p>
           </div>
-          <button type="button" className="btn-base border-1.5 border-white/50 text-on-ink hover:bg-white/15 md:ml-auto">
+          <button type="button" className="btn-base btn-outline-light md:ml-auto">
             RSVP & Details →
           </button>
         </div>
@@ -104,10 +104,10 @@ function EventsPage() {
                 <p className="mt-4 flex-1 text-[15px] leading-relaxed text-muted-foreground">{e.body}</p>
                 <div className="mt-5 flex flex-wrap items-center gap-4 border-t border-border pt-4 text-[14px] text-muted-foreground">
                   <span className="flex items-center gap-1.5">
-                    <Clock className="size-4 text-brand-sky" aria-hidden /> {e.time}
+                    <Clock className="size-4 text-brand-clay" aria-hidden /> {e.time}
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <MapPin className="size-4 text-brand-sky" aria-hidden /> {e.place}
+                    <MapPin className="size-4 text-brand-clay" aria-hidden /> {e.place}
                   </span>
                   <button
                     type="button"

@@ -97,13 +97,13 @@ function AboutPage() {
 
       <section className="section-y bg-surface-mist">
         <div className="shell">
-          <span className="eyebrow text-brand-sky">Vision & Beliefs</span>
+          <span className="eyebrow text-brand-clay">Vision & Beliefs</span>
           <h2 className="display-lg mt-3.5 mb-10">What we believe</h2>
           <div className="grid gap-5 md:grid-cols-3">
             {beliefs.map((b) => (
               <div key={b.n} className="card-soft border border-border p-8">
                 <div
-                  className="text-4xl leading-none font-black text-brand-sky/35"
+                  className="text-4xl leading-none font-black text-ink/25"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {b.n}
