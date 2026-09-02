@@ -19,16 +19,20 @@
  */
 
 @theme inline {
-  --font-display: "Jost", system-ui, sans-serif;
-  --font-sans: "Hanken Grotesk", system-ui, sans-serif;
-  --font-serif: "Newsreader", Georgia, serif;
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-script: "Pinyon Script", "Apple Chancery", cursive;
 
   --color-ink: var(--ink);
   --color-ink-deep: var(--ink-deep);
-  --color-brand-red: var(--brand-red);
-  --color-brand-red-hover: var(--brand-red-hover);
-  --color-brand-blue: var(--brand-blue);
-  --color-brand-blue-hover: var(--brand-blue-hover);
+  --color-brand-clay: var(--brand-clay);
+  --color-brand-clay-hover: var(--brand-clay-hover);
+  --color-brand-sky: var(--brand-sky);
+  --color-brand-sky-deep: var(--brand-sky-deep);
+  --color-sub-kids: var(--sub-kids);
+  --color-sub-men: var(--sub-men);
+  --color-sub-women: var(--sub-women);
+  --color-sub-worship: var(--sub-worship);
   --color-surface-mist: var(--surface-mist);
   --color-on-ink: var(--on-ink);
 
@@ -79,51 +83,58 @@
 :root {
   --radius: 1.125rem;
 
-  /* World Overcomers brand palette */
-  --ink: oklch(0.219 0.021 251.5);
-  --ink-deep: oklch(0.183 0.019 251.5);
-  --brand-red: oklch(0.567 0.207 30.2);
-  --brand-red-hover: oklch(0.505 0.19 30.2);
-  --brand-blue: oklch(0.657 0.132 251.4);
-  --brand-blue-hover: oklch(0.585 0.135 251.4);
-  --surface-mist: oklch(0.972 0.003 250);
-  --on-ink: oklch(1 0 0);
+  /* Overcomers brand palette — O Black, O Slate, O Sky, O White, O Clay */
+  --o-black: oklch(0.2393 0 90);
+  --ink: oklch(0.3863 0.0404 263.9); /* O Slate — primary brand color */
+  --ink-deep: oklch(0.3266 0.0374 267.5);
+  --brand-clay: oklch(0.6072 0.1127 45.9); /* O Clay — accent */
+  --brand-clay-hover: oklch(0.5372 0.1046 45.9);
+  --brand-sky: oklch(0.9024 0.0153 229); /* O Sky */
+  --brand-sky-deep: oklch(0.4534 0.0454 265.4);
+  --surface-mist: oklch(0.9024 0.0153 229);
+  --on-ink: oklch(0.9884 0.0138 88.7);
 
-  --background: oklch(1 0 0);
-  --foreground: var(--ink);
-  --card: oklch(1 0 0);
-  --card-foreground: var(--ink);
-  --popover: oklch(1 0 0);
-  --popover-foreground: var(--ink);
-  --primary: var(--brand-red);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: var(--surface-mist);
+  /* Ministry sub-brand accents */
+  --sub-kids: oklch(0.7656 0.0681 84.8);
+  --sub-men: oklch(0.6778 0.0239 132.6);
+  --sub-women: oklch(0.6723 0.0542 30.6);
+  --sub-worship: oklch(0.7412 0.0221 232.3);
+
+  --background: oklch(0.9884 0.0138 88.7); /* O White */
+  --foreground: var(--o-black);
+  --card: oklch(1 0.004 88.7);
+  --card-foreground: var(--o-black);
+  --popover: oklch(0.9958 0.008 88.7);
+  --popover-foreground: var(--o-black);
+  --primary: var(--brand-clay);
+  --primary-foreground: oklch(0.9884 0.0138 88.7);
+  --secondary: oklch(0.9524 0.0113 88.7);
   --secondary-foreground: var(--ink);
-  --muted: var(--surface-mist);
-  --muted-foreground: oklch(0.52 0.014 251);
-  --accent: var(--brand-blue);
-  --accent-foreground: oklch(1 0 0);
+  --muted: oklch(0.9524 0.0113 88.7);
+  --muted-foreground: oklch(0.4834 0.0224 265);
+  --accent: var(--brand-clay);
+  --accent-foreground: oklch(0.9884 0.0138 88.7);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.925 0.004 250);
-  --input: oklch(0.925 0.004 250);
-  --ring: var(--brand-blue);
+  --border: oklch(0.9 0.009 88.7);
+  --input: oklch(0.9 0.009 88.7);
+  --ring: var(--brand-clay);
 
   /* Hero + surface treatments */
   --hero-scrim: linear-gradient(
     180deg,
-    oklch(0.219 0.021 251.5 / 0.45) 0%,
-    oklch(0.219 0.021 251.5 / 0.15) 30%,
-    oklch(0.219 0.021 251.5 / 0.92) 100%
+    oklch(0.2393 0.02 264 / 0.5) 0%,
+    oklch(0.2393 0.02 264 / 0.2) 30%,
+    oklch(0.2393 0.02 264 / 0.94) 100%
   );
   --hero-scrim-side: linear-gradient(
     90deg,
-    oklch(0.219 0.021 251.5 / 0.82) 0%,
-    oklch(0.219 0.021 251.5 / 0.08) 62%
+    oklch(0.2393 0.02 264 / 0.84) 0%,
+    oklch(0.2393 0.02 264 / 0.08) 62%
   );
-  --gradient-red: linear-gradient(135deg, var(--brand-red), oklch(0.63 0.19 40));
-  --shadow-card: 0 1px 3px oklch(0.219 0.021 251.5 / 0.08);
-  --shadow-lift: 0 18px 40px -18px oklch(0.219 0.021 251.5 / 0.35);
+  --gradient-clay: linear-gradient(135deg, var(--brand-clay), oklch(0.68 0.09 60));
+  --shadow-card: 0 1px 3px oklch(0.3863 0.0404 263.9 / 0.1);
+  --shadow-lift: 0 18px 40px -18px oklch(0.3863 0.0404 263.9 / 0.35);
 
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -201,7 +212,7 @@
   }
 
   ::selection {
-    background: var(--brand-blue);
+    background: var(--brand-clay);
     color: var(--on-ink);
   }
 }
@@ -279,18 +290,18 @@
 }
 
 @utility btn-primary {
-  background: var(--brand-red);
+  background: var(--brand-clay);
   color: var(--on-ink);
   &:hover {
-    background: var(--brand-red-hover);
+    background: var(--brand-clay-hover);
   }
 }
 
-@utility btn-blue {
-  background: var(--brand-blue);
+@utility btn-slate {
+  background: var(--ink);
   color: var(--on-ink);
   &:hover {
-    background: var(--brand-blue-hover);
+    background: var(--ink-deep);
   }
 }
 
@@ -324,6 +335,14 @@
   background: var(--card);
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-card);
+}
+
+@utility script-accent {
+  font-family: var(--font-script);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.1;
 }
 
 @utility fade-up {
