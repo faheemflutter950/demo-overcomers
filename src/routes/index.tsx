@@ -2,6 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Play } from "lucide-react";
 
 import heroImg from "@/assets/worship-hero.jpg.asset.json";
+import lobbyImg from "@/assets/welcome-lobby.jpg";
+import onlineImg from "@/assets/watch-online.jpg";
+import serveImg from "@/assets/serve-city.jpg";
 import symbolBlack from "@/assets/wocc-symbol-black.png.asset.json";
 import { SectionHeading } from "@/components/site/PageHero";
 import { messages } from "@/data/site-content";
@@ -32,7 +35,7 @@ const participate = [
     body: "Meet us in the house for an unforgettable morning of worship and Word.",
     cta: "Plan Visit",
     to: "/visit",
-    tone: "bg-brand-sky/70",
+    image: lobbyImg,
   },
   {
     n: "02",
@@ -40,7 +43,7 @@ const participate = [
     body: "We're live every Sunday — join the Worship Experience from anywhere in the world.",
     cta: "Join Online",
     to: "/messages",
-    tone: "bg-brand-clay/70",
+    image: onlineImg,
   },
   {
     n: "03",
@@ -48,7 +51,7 @@ const participate = [
     body: "Take the church to the streets of Durham through outreach and community serve days.",
     cta: "Get Involved",
     to: "/connect/ministries",
-    tone: "bg-ink/70",
+    image: serveImg,
   },
 ] as const;
 
@@ -163,12 +166,12 @@ function Home() {
                 className="group relative flex min-h-[380px] flex-col justify-end overflow-hidden rounded-3xl bg-ink md:min-h-[440px]"
               >
                 <img
-                  src={heroImg.url}
+                  src={card.image}
                   alt=""
                   aria-hidden
-                  className="absolute inset-0 size-full object-cover grayscale transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className={`absolute inset-0 mix-blend-color ${card.tone}`} />
                 <div className="hero-scrim absolute inset-0" />
                 <div className="relative p-8">
                   <span className="eyebrow text-brand-sky">{card.n}</span>
