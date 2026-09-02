@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as EventsRouteImport } from './routes/events'
+import { Route as GiveRouteImport } from './routes/give'
 import { Route as MessagesRouteImport } from './routes/messages'
 import { Route as VisitRouteImport } from './routes/visit'
 import { Route as ConnectBelongGroupsRouteImport } from './routes/connect.belong-groups'
@@ -31,6 +32,11 @@ const AboutRoute = AboutRouteImport.update({
 const EventsRoute = EventsRouteImport.update({
   id: '/events',
   path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GiveRoute = GiveRouteImport.update({
+  id: '/give',
+  path: '/give',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MessagesRoute = MessagesRouteImport.update({
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/events': typeof EventsRoute
+  '/give': typeof GiveRoute
   '/messages': typeof MessagesRoute
   '/visit': typeof VisitRoute
   '/connect/belong-groups': typeof ConnectBelongGroupsRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/events': typeof EventsRoute
+  '/give': typeof GiveRoute
   '/messages': typeof MessagesRoute
   '/visit': typeof VisitRoute
   '/connect/belong-groups': typeof ConnectBelongGroupsRoute
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/events': typeof EventsRoute
+  '/give': typeof GiveRoute
   '/messages': typeof MessagesRoute
   '/visit': typeof VisitRoute
   '/connect/belong-groups': typeof ConnectBelongGroupsRoute
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/events'
+    | '/give'
     | '/messages'
     | '/visit'
     | '/connect/belong-groups'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/events'
+    | '/give'
     | '/messages'
     | '/visit'
     | '/connect/belong-groups'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/events'
+    | '/give'
     | '/messages'
     | '/visit'
     | '/connect/belong-groups'
@@ -128,6 +140,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   EventsRoute: typeof EventsRoute
+  GiveRoute: typeof GiveRoute
   MessagesRoute: typeof MessagesRoute
   VisitRoute: typeof VisitRoute
   ConnectBelongGroupsRoute: typeof ConnectBelongGroupsRoute
@@ -156,6 +169,13 @@ declare module '@tanstack/react-router' {
       path: '/events'
       fullPath: '/events'
       preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/give': {
+      id: '/give'
+      path: '/give'
+      fullPath: '/give'
+      preLoaderRoute: typeof GiveRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/messages': {
@@ -200,6 +220,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   EventsRoute: EventsRoute,
+  GiveRoute: GiveRoute,
   MessagesRoute: MessagesRoute,
   VisitRoute: VisitRoute,
   ConnectBelongGroupsRoute: ConnectBelongGroupsRoute,
