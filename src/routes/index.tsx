@@ -2,6 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Play } from "lucide-react";
 
 import heroImg from "@/assets/worship-hero.jpg.asset.json";
+import lobbyImg from "@/assets/welcome-lobby.jpg";
+import onlineImg from "@/assets/watch-online.jpg";
+import serveImg from "@/assets/serve-city.jpg";
 import symbolBlack from "@/assets/wocc-symbol-black.png.asset.json";
 import { SectionHeading } from "@/components/site/PageHero";
 import { messages } from "@/data/site-content";
@@ -32,7 +35,7 @@ const participate = [
     body: "Meet us in the house for an unforgettable morning of worship and Word.",
     cta: "Plan Visit",
     to: "/visit",
-    tone: "bg-brand-blue/70",
+    image: lobbyImg,
   },
   {
     n: "02",
@@ -40,7 +43,7 @@ const participate = [
     body: "We're live every Sunday — join the Worship Experience from anywhere in the world.",
     cta: "Join Online",
     to: "/messages",
-    tone: "bg-brand-red/70",
+    image: onlineImg,
   },
   {
     n: "03",
@@ -48,7 +51,7 @@ const participate = [
     body: "Take the church to the streets of Durham through outreach and community serve days.",
     cta: "Get Involved",
     to: "/connect/ministries",
-    tone: "bg-ink/70",
+    image: serveImg,
   },
 ] as const;
 
@@ -89,14 +92,14 @@ function Home() {
         </div>
 
         <div className="shell relative pt-28 pb-16 md:pb-[84px]">
-          <div className="fade-up mb-7 inline-flex items-center gap-2.5 rounded-pill border border-brand-red/50 bg-brand-red/15 px-4 py-2">
-            <span className="size-2 rounded-full bg-brand-red ring-4 ring-brand-red/25" />
+          <div className="fade-up mb-7 inline-flex items-center gap-2.5 rounded-pill border border-brand-clay/50 bg-brand-clay/15 px-4 py-2">
+            <span className="size-2 rounded-full bg-brand-clay ring-4 ring-brand-clay/25" />
             <span className="eyebrow text-on-ink">World Overcomers · Durham, NC</span>
           </div>
           <h1 className="display-xl max-w-[980px] text-on-ink">
             Balanced victory
             <br />
-            for the <span className="text-brand-blue">God designed</span> life
+            for the <span className="text-brand-sky">God designed</span> life
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/75 md:text-xl">
             A welcoming family of faith in Durham, NC, led by Pastor Andy Thompson. Wherever you are, there's a
@@ -125,12 +128,12 @@ function Home() {
       {/* ============ FEATURED EVENT STRIP ============ */}
       <section className="border-t border-white/10 bg-ink-deep">
         <div className="shell flex flex-wrap items-center gap-x-6 gap-y-2 py-5">
-          <span className="eyebrow text-brand-red">This Weekend</span>
+          <span className="eyebrow text-brand-clay">This Weekend</span>
           <span className="text-[19px] font-semibold text-on-ink" style={{ fontFamily: "var(--font-display)" }}>
             Father's Day at World Overcomers
           </span>
           <span className="text-[15px] text-white/55">Sunday · 10:00AM · Bring the whole family</span>
-          <Link to="/events" className="text-sm font-semibold text-brand-blue md:ml-auto">
+          <Link to="/events" className="text-sm font-semibold text-brand-sky md:ml-auto">
             Details →
           </Link>
         </div>
@@ -163,15 +166,15 @@ function Home() {
                 className="group relative flex min-h-[380px] flex-col justify-end overflow-hidden rounded-3xl bg-ink md:min-h-[440px]"
               >
                 <img
-                  src={heroImg.url}
+                  src={card.image}
                   alt=""
                   aria-hidden
-                  className="absolute inset-0 size-full object-cover grayscale transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className={`absolute inset-0 mix-blend-color ${card.tone}`} />
                 <div className="hero-scrim absolute inset-0" />
                 <div className="relative p-8">
-                  <span className="eyebrow text-brand-blue">{card.n}</span>
+                  <span className="eyebrow text-brand-sky">{card.n}</span>
                   <h3 className="display-md mt-2 text-on-ink">{card.title}</h3>
                   <p className="mt-2 mb-4 text-[15px] leading-relaxed text-white/80">{card.body}</p>
                   <span
@@ -215,7 +218,7 @@ function Home() {
                     className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute bottom-3.5 left-3.5 flex items-center gap-2 rounded-pill bg-ink/80 px-3 py-1.5 backdrop-blur">
-                    <Play className="size-3 text-brand-red" aria-hidden />
+                    <Play className="size-3 text-brand-clay" aria-hidden />
                     <span
                       className="text-xs font-semibold tracking-wide text-on-ink"
                       style={{ fontFamily: "var(--font-display)" }}
@@ -247,21 +250,21 @@ function Home() {
       <section className="section-y bg-ink">
         <div className="shell">
           <div className="mb-12 text-center">
-            <span className="eyebrow text-brand-blue">Find Your Place</span>
+            <span className="eyebrow text-brand-sky">Find Your Place</span>
             <h2 className="display-lg mt-3.5 text-on-ink">How to get involved</h2>
           </div>
           <div className="grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-3">
             {involved.map((item) => (
               <Link key={item.n} to="/connect/ministries" className="bg-ink p-9 transition-colors hover:bg-ink-deep">
                 <div
-                  className="text-5xl leading-none font-black text-brand-blue/35"
+                  className="text-5xl leading-none font-black text-brand-sky/35"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {item.n}
                 </div>
                 <h3 className="display-md mt-4 text-on-ink">{item.title}</h3>
                 <p className="mt-3 mb-5 text-[15px] leading-relaxed text-white/60">{item.body}</p>
-                <span className="text-sm font-bold text-brand-blue" style={{ fontFamily: "var(--font-display)" }}>
+                <span className="text-sm font-bold text-brand-sky" style={{ fontFamily: "var(--font-display)" }}>
                   {item.cta} →
                 </span>
               </Link>
@@ -274,7 +277,7 @@ function Home() {
       <section className="section-y bg-background">
         <div className="shell grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <span className="eyebrow text-brand-blue">Belong Groups & Ministries</span>
+            <span className="eyebrow text-brand-clay">Belong Groups & Ministries</span>
             <h2 className="display-lg mt-3.5 mb-5 text-foreground">You weren't meant to do life alone</h2>
             <p className="mb-7 text-[17px] leading-relaxed text-muted-foreground">
               From men's and women's ministry to youth, marriage, and Belong Groups across the Triangle — there's
@@ -292,7 +295,7 @@ function Home() {
           <div className="grid grid-cols-2 gap-4">
             {["Men", "Women", "Youth", "Kids", "Marriage", "Outreach"].map((m) => (
               <div key={m} className="card-soft border border-border p-6">
-                <span className="eyebrow text-brand-red">Ministry</span>
+                <span className="eyebrow text-brand-clay">Ministry</span>
                 <div
                   className="mt-2 text-xl font-extrabold text-foreground"
                   style={{ fontFamily: "var(--font-display)" }}
@@ -307,7 +310,7 @@ function Home() {
 
       {/* ============ SERVICE TIMES + NEWSLETTER ============ */}
       <section className="grid lg:grid-cols-2">
-        <div className="bg-brand-red px-6 py-16 text-on-ink md:px-12 md:py-20">
+        <div className="bg-brand-clay px-6 py-16 text-on-ink md:px-12 md:py-20">
           <div className="mx-auto max-w-lg lg:mr-0 lg:ml-auto">
             <span className="eyebrow text-white/70">Plan Your Sunday</span>
             <h2 className="display-lg mt-3.5 mb-7">
@@ -340,7 +343,7 @@ function Home() {
         </div>
         <div className="flex flex-col justify-center bg-ink px-6 py-16 text-on-ink md:px-14 md:py-20">
           <div className="max-w-lg">
-            <span className="eyebrow text-brand-blue">Stay Connected</span>
+            <span className="eyebrow text-brand-sky">Stay Connected</span>
             <h3 className="display-md mt-3.5 mb-3">Keep up with all things WOCC</h3>
             <p className="mb-6 text-[15px] text-white/60">
               Subscribe to our newsletter for events, messages, and updates.
@@ -358,7 +361,7 @@ function Home() {
                   type="email"
                   required
                   placeholder="Your email address"
-                  className="w-full rounded-pill border border-white/20 bg-white/[0.06] px-5 py-4 text-[15px] text-on-ink outline-none placeholder:text-white/40 focus:border-brand-blue"
+                  className="w-full rounded-pill border border-white/20 bg-white/[0.06] px-5 py-4 text-[15px] text-on-ink outline-none placeholder:text-white/40 focus:border-brand-sky"
                 />
               </label>
               <button type="submit" className="btn-base btn-primary !py-4">

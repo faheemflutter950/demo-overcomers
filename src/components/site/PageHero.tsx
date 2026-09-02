@@ -14,7 +14,7 @@ export function PageHero({
   return (
     <section className="bg-ink text-on-ink">
       <div className="shell pt-16 pb-14 md:pt-24 md:pb-20">
-        <span className="eyebrow text-brand-blue">{eyebrow}</span>
+        <span className="eyebrow text-brand-sky">{eyebrow}</span>
         <h1 className="display-xl mt-4 max-w-4xl">{title}</h1>
         {intro && <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">{intro}</p>}
         {children && <div className="mt-8">{children}</div>}
@@ -37,7 +37,7 @@ export function SectionHeading({
   return (
     <div className="mb-10 flex flex-wrap items-end justify-between gap-6 md:mb-12">
       <div>
-        <span className={`eyebrow ${tone === "dark" ? "text-brand-blue" : "text-brand-red"}`}>{eyebrow}</span>
+        <span className={`eyebrow ${tone === "dark" ? "text-brand-sky" : "text-brand-clay"}`}>{eyebrow}</span>
         <h2 className={`display-lg mt-3.5 ${tone === "dark" ? "text-on-ink" : "text-foreground"}`}>{title}</h2>
       </div>
       {aside}

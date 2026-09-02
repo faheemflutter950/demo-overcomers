@@ -34,7 +34,7 @@ function MessagesPage() {
     <>
       <section className="bg-ink text-on-ink">
         <div className="shell pt-16 pb-16 md:pt-20 md:pb-20">
-          <span className="eyebrow text-brand-blue">Messages</span>
+          <span className="eyebrow text-brand-sky">Messages</span>
           <h1 className="display-xl mt-4">Watch & grow</h1>
 
           <div className="mt-10 grid items-center gap-10 lg:grid-cols-2">
@@ -46,13 +46,13 @@ function MessagesPage() {
                 aria-label={`Play ${featured.title}`}
                 className="absolute inset-0 flex items-center justify-center"
               >
-                <span className="flex size-20 items-center justify-center rounded-full bg-brand-red transition-colors hover:bg-brand-red-hover">
+                <span className="flex size-20 items-center justify-center rounded-full bg-brand-clay transition-colors hover:bg-brand-clay-hover">
                   <Play className="size-8 text-on-ink" aria-hidden />
                 </span>
               </button>
             </div>
             <div>
-              <span className="eyebrow text-brand-red">Latest · {featured.date}</span>
+              <span className="eyebrow text-brand-clay">Latest · {featured.date}</span>
               <h2 className="display-lg mt-3.5">{featured.title}</h2>
               <p className="mt-5 text-[17px] leading-relaxed text-white/70">{featured.excerpt}</p>
               <div className="mt-6 text-[15px] font-semibold text-white/85">{featured.speaker}</div>
@@ -92,7 +92,7 @@ function MessagesPage() {
                     className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute bottom-3.5 left-3.5 flex items-center gap-2 rounded-pill bg-ink/80 px-3 py-1.5 backdrop-blur">
-                    <Play className="size-3 text-brand-red" aria-hidden />
+                    <Play className="size-3 text-brand-clay" aria-hidden />
                     <span
                       className="text-xs font-semibold tracking-wide text-on-ink"
                       style={{ fontFamily: "var(--font-display)" }}

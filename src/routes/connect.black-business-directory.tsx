@@ -114,7 +114,7 @@ function DirectoryPage() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search businesses, services, categories"
-                className="w-full rounded-pill border border-border bg-secondary py-4 pr-5 pl-12 text-[15px] text-foreground outline-none focus:border-brand-blue"
+                className="w-full rounded-pill border border-border bg-secondary py-4 pr-5 pl-12 text-[15px] text-foreground outline-none focus:border-brand-sky"
               />
             </label>
           </div>
@@ -126,7 +126,7 @@ function DirectoryPage() {
                 type="button"
                 onClick={() => setCategory(c)}
                 aria-pressed={category === c}
-                className={`btn-base !px-5 !py-2.5 !text-sm ${category === c ? "btn-blue" : "btn-outline-ink"}`}
+                className={`btn-base !px-5 !py-2.5 !text-sm ${category === c ? "btn-slate" : "btn-outline-ink"}`}
               >
                 {c}
               </button>
@@ -141,7 +141,7 @@ function DirectoryPage() {
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {visible.map((b) => (
                 <article key={b.name} className="card-soft flex flex-col border border-border p-7">
-                  <span className="eyebrow text-brand-red">{b.category}</span>
+                  <span className="eyebrow text-brand-clay">{b.category}</span>
                   <h2 className="display-md mt-3 text-foreground">{b.name}</h2>
                   <p className="mt-2.5 flex-1 text-[15px] leading-relaxed text-muted-foreground">{b.blurb}</p>
                   <div className="mt-5 border-t border-border pt-4 text-[14px] text-muted-foreground">
@@ -157,7 +157,7 @@ function DirectoryPage() {
       <section className="section-y bg-ink text-on-ink">
         <div className="shell grid items-center gap-10 lg:grid-cols-2">
           <div>
-            <span className="eyebrow text-brand-blue">List your business</span>
+            <span className="eyebrow text-brand-sky">List your business</span>
             <h2 className="display-lg mt-3.5">Are you a WOCC business owner?</h2>
             <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-white/70">
               Submit your business and we'll add it to the directory so the whole church family can find and
@@ -177,7 +177,7 @@ function DirectoryPage() {
                 <input
                   required
                   placeholder="Business name"
-                  className="w-full rounded-pill border border-white/20 bg-white/[0.06] px-5 py-3.5 text-[15px] text-on-ink outline-none placeholder:text-white/40 focus:border-brand-blue"
+                  className="w-full rounded-pill border border-white/20 bg-white/[0.06] px-5 py-3.5 text-[15px] text-on-ink outline-none placeholder:text-white/40 focus:border-brand-sky"
                 />
               </label>
               <label>
@@ -186,7 +186,7 @@ function DirectoryPage() {
                   type="email"
                   required
                   placeholder="Your email"
-                  className="w-full rounded-pill border border-white/20 bg-white/[0.06] px-5 py-3.5 text-[15px] text-on-ink outline-none placeholder:text-white/40 focus:border-brand-blue"
+                  className="w-full rounded-pill border border-white/20 bg-white/[0.06] px-5 py-3.5 text-[15px] text-on-ink outline-none placeholder:text-white/40 focus:border-brand-sky"
                 />
               </label>
               <label>
@@ -195,7 +195,7 @@ function DirectoryPage() {
                   rows={3}
                   required
                   placeholder="What you offer"
-                  className="w-full rounded-2xl border border-white/20 bg-white/[0.06] px-5 py-3.5 text-[15px] text-on-ink outline-none placeholder:text-white/40 focus:border-brand-blue"
+                  className="w-full rounded-2xl border border-white/20 bg-white/[0.06] px-5 py-3.5 text-[15px] text-on-ink outline-none placeholder:text-white/40 focus:border-brand-sky"
                 />
               </label>
               <button type="submit" className="btn-base btn-primary mt-1">

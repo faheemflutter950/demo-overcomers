@@ -67,8 +67,8 @@ export function Header() {
             <Link
               key={link.to}
               to={link.to}
-              className="text-[14.5px] font-medium tracking-wide text-foreground/80 transition-colors hover:text-brand-red"
-              activeProps={{ className: "text-brand-red" }}
+              className="text-[14.5px] font-medium tracking-wide text-foreground/80 transition-colors hover:text-brand-clay"
+              activeProps={{ className: "text-brand-clay" }}
             >
               {link.label}
             </Link>
@@ -80,7 +80,7 @@ export function Header() {
               onClick={() => setConnectOpen((v) => !v)}
               aria-expanded={connectOpen}
               aria-haspopup="true"
-              className="flex items-center gap-1 text-[14.5px] font-medium tracking-wide text-foreground/80 transition-colors hover:text-brand-red"
+              className="flex items-center gap-1 text-[14.5px] font-medium tracking-wide text-foreground/80 transition-colors hover:text-brand-clay"
             >
               Connect
               <ChevronDown
@@ -143,7 +143,7 @@ export function Header() {
           />
           <div className="absolute inset-y-0 right-0 flex w-[88%] max-w-sm flex-col bg-ink text-on-ink">
             <div className="flex h-[76px] items-center justify-between border-b border-white/10 px-5">
-              <span className="eyebrow text-brand-blue">Menu</span>
+              <span className="eyebrow text-brand-sky">Menu</span>
               <button
                 type="button"
                 onClick={() => setMobileOpen(false)}

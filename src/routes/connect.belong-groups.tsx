@@ -82,17 +82,17 @@ function BelongGroupsPage() {
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {groups.map((g) => (
               <article key={g.name} className="card-soft flex flex-col border border-border p-7">
-                <span className="eyebrow text-brand-red">{g.focus}</span>
+                <span className="eyebrow text-brand-clay">{g.focus}</span>
                 <h3 className="display-md mt-3 text-foreground">{g.name}</h3>
                 <div className="mt-5 flex flex-col gap-2 text-[15px] text-muted-foreground">
                   <span className="flex items-center gap-2">
-                    <Clock className="size-4 text-brand-blue" aria-hidden /> {g.when}
+                    <Clock className="size-4 text-brand-clay" aria-hidden /> {g.when}
                   </span>
                   <span className="flex items-center gap-2">
-                    <MapPin className="size-4 text-brand-blue" aria-hidden /> {g.where}
+                    <MapPin className="size-4 text-brand-clay" aria-hidden /> {g.where}
                   </span>
                   <span className="flex items-center gap-2">
-                    <Users className="size-4 text-brand-blue" aria-hidden /> Open to new members
+                    <Users className="size-4 text-brand-clay" aria-hidden /> Open to new members
                   </span>
                 </div>
                 <button
@@ -109,13 +109,13 @@ function BelongGroupsPage() {
 
       <section className="section-y bg-surface-mist">
         <div className="shell">
-          <span className="eyebrow text-brand-red">How it works</span>
+          <span className="eyebrow text-brand-clay">How it works</span>
           <h2 className="display-lg mt-3.5 mb-10">Three steps to belong</h2>
           <div className="grid gap-5 md:grid-cols-3">
             {how.map((s) => (
               <div key={s.n} className="card-soft border border-border p-8">
                 <div
-                  className="text-4xl leading-none font-black text-brand-red/30"
+                  className="text-4xl leading-none font-black text-brand-clay/30"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {s.n}

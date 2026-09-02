@@ -65,7 +65,7 @@ function VisitPage() {
         <div className="shell grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
           {facts.map((f) => (
             <div key={f.label} className="bg-background p-7">
-              <span className="eyebrow text-brand-blue">{f.label}</span>
+              <span className="eyebrow text-brand-clay">{f.label}</span>
               <div
                 className="mt-2 text-2xl font-extrabold text-foreground"
                 style={{ fontFamily: "var(--font-display)" }}
@@ -80,13 +80,13 @@ function VisitPage() {
 
       <section className="section-y bg-surface-mist">
         <div className="shell">
-          <span className="eyebrow text-brand-red">What to expect</span>
+          <span className="eyebrow text-brand-clay">What to expect</span>
           <h2 className="display-lg mt-3.5 mb-10">Come as you are. Leave changed.</h2>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {expect.map((item, i) => (
               <div key={item.title} className="card-soft border border-border p-7">
                 <div
-                  className="text-4xl leading-none font-black text-brand-red/30"
+                  className="text-4xl leading-none font-black text-brand-clay/30"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {String(i + 1).padStart(2, "0")}
@@ -117,7 +117,7 @@ function VisitPage() {
             </div>
           </div>
           <div className="rounded-3xl border border-white/12 bg-white/[0.04] p-8">
-            <span className="eyebrow text-brand-blue">Find us</span>
+            <span className="eyebrow text-brand-sky">Find us</span>
             <div
               className="mt-3 text-2xl font-extrabold"
               style={{ fontFamily: "var(--font-display)" }}

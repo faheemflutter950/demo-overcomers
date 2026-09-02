@@ -54,9 +54,9 @@ function AboutPage() {
       <section className="bg-ink text-on-ink">
         <div className="shell grid items-center gap-12 pt-16 pb-16 md:pt-20 md:pb-20 lg:grid-cols-2">
           <div>
-            <span className="eyebrow text-brand-blue">Our Founder</span>
+            <span className="eyebrow text-brand-sky">Our Founder</span>
             <h1 className="display-xl mt-4">Pastor Andy Thompson</h1>
-            <p className="mt-4 text-[15px] font-semibold tracking-wide text-brand-red">
+            <p className="mt-4 text-[15px] font-semibold tracking-wide text-brand-clay">
               Founding Pastor · World Overcomers Christian Church
             </p>
             <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-white/70">
@@ -64,8 +64,8 @@ function AboutPage() {
               carried a balanced faith message to people far beyond it — through television, books, and ministry.
             </p>
             <blockquote
-              className="mt-8 border-l-2 border-brand-red pl-5 text-xl leading-snug text-on-ink"
-              style={{ fontFamily: "var(--font-serif)" }}
+              className="mt-8 border-l-2 border-brand-clay pl-5 text-xl leading-snug text-on-ink"
+              style={{ fontFamily: "var(--font-script)" }}
             >
               “We want the people of the world to find balanced victory for the God-designed life.”
             </blockquote>
@@ -86,7 +86,7 @@ function AboutPage() {
 
       <section className="section-y bg-background">
         <div className="shell max-w-3xl">
-          <span className="eyebrow text-brand-red">The full story</span>
+          <span className="eyebrow text-brand-clay">The full story</span>
           <div className="mt-6 flex flex-col gap-5 text-[17px] leading-[1.75] text-muted-foreground">
             {story.map((p) => (
               <p key={p.slice(0, 30)}>{p}</p>
@@ -97,13 +97,13 @@ function AboutPage() {
 
       <section className="section-y bg-surface-mist">
         <div className="shell">
-          <span className="eyebrow text-brand-blue">Vision & Beliefs</span>
+          <span className="eyebrow text-brand-clay">Vision & Beliefs</span>
           <h2 className="display-lg mt-3.5 mb-10">What we believe</h2>
           <div className="grid gap-5 md:grid-cols-3">
             {beliefs.map((b) => (
               <div key={b.n} className="card-soft border border-border p-8">
                 <div
-                  className="text-4xl leading-none font-black text-brand-blue/35"
+                  className="text-4xl leading-none font-black text-ink/25"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {b.n}
@@ -118,7 +118,7 @@ function AboutPage() {
 
       <section className="section-y bg-ink text-on-ink">
         <div className="shell">
-          <span className="eyebrow text-brand-blue">Ministries & Belong Groups</span>
+          <span className="eyebrow text-brand-sky">Ministries & Belong Groups</span>
           <h2 className="display-lg mt-3.5">Find your people</h2>
           <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-white/70">
             There's a place for every season of life. Jump into a ministry or a Belong Group near you.
