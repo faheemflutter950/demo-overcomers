@@ -49,7 +49,15 @@ const methods = [
   { id: "crypto", label: "Crypto" },
 ] as const;
 
-const waysToGive = [
+type WayToGive = {
+  Icon: typeof Smartphone;
+  title: string;
+  body: string;
+  steps?: readonly string[];
+  action?: string;
+};
+
+const waysToGive: readonly WayToGive[] = [
   {
     Icon: Smartphone,
     title: "Give in the App",
@@ -78,7 +86,7 @@ const waysToGive = [
     body: "We gladly receive stock and mutual fund transfers, cryptocurrency, donor-advised fund grants, vehicles, and real estate. Our finance team will walk you through every step.",
     action: "Contact the finance team",
   },
-] as const;
+];
 
 const impact = [
   {
