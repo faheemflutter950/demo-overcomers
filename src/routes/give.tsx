@@ -14,10 +14,7 @@ import {
   Smartphone,
 } from "lucide-react";
 
-import heroImg from "@/assets/worship-hero.jpg.asset.json";
-import serveImg from "@/assets/serve-city.jpg";
-import lobbyImg from "@/assets/welcome-lobby.jpg";
-import onlineImg from "@/assets/watch-online.jpg";
+import { photos } from "@/data/photos";
 import { church } from "@/data/site-content";
 
 export const Route = createFileRoute("/give")({
@@ -52,7 +49,15 @@ const methods = [
   { id: "crypto", label: "Crypto" },
 ] as const;
 
-const waysToGive = [
+type WayToGive = {
+  Icon: typeof Smartphone;
+  title: string;
+  body: string;
+  steps?: readonly string[];
+  action?: string;
+};
+
+const waysToGive: readonly WayToGive[] = [
   {
     Icon: Smartphone,
     title: "Give in the App",
@@ -81,23 +86,23 @@ const waysToGive = [
     body: "We gladly receive stock and mutual fund transfers, cryptocurrency, donor-advised fund grants, vehicles, and real estate. Our finance team will walk you through every step.",
     action: "Contact the finance team",
   },
-] as const;
+];
 
 const impact = [
   {
-    image: serveImg,
+    image: photos.communityGiveaway,
     eyebrow: "Local Outreach",
     title: "Durham neighbors served",
     body: "Groceries, school supplies, utility assistance, and prayer for families across the Triangle every month.",
   },
   {
-    image: lobbyImg,
+    image: photos.lobbyCrowd,
     eyebrow: "Church Expansion",
     title: "Room for the next family",
     body: "Your giving funds our campus, kids and youth environments, and the teams that welcome first-time guests.",
   },
   {
-    image: onlineImg,
+    image: photos.praiseTeam,
     eyebrow: "Global Missions",
     title: "The message, everywhere",
     body: "Broadcast, digital ministry, and mission partnerships carry the faith message to more than 200 countries.",
@@ -155,7 +160,7 @@ function GiveHero() {
 
   return (
     <section className="relative overflow-hidden bg-ink text-on-ink">
-      <img src={heroImg.url} alt="" aria-hidden className="absolute inset-0 size-full object-cover opacity-25" />
+      <img src={photos.congregation} alt="" aria-hidden className="absolute inset-0 size-full object-cover opacity-25" />
       <div className="hero-scrim-side absolute inset-0" />
       <div className="shell relative grid items-center gap-12 pt-16 pb-16 md:pt-24 md:pb-24 lg:grid-cols-[1.05fr_1fr]">
         <div>
@@ -432,41 +437,33 @@ function AccountabilitySection() {
 
 /* ---- Section: FAQ accordion ---- */
 function FaqSection() {
-  const [open, setOpen] = useState<number | null>(0);
-
   return (
     <section className="section-y bg-background">
       <div className="shell max-w-3xl">
         <span className="eyebrow text-brand-clay">Giving FAQs</span>
         <h2 className="display-lg mt-3.5 mb-10">Questions, answered</h2>
         <div className="flex flex-col gap-3">
-          {faqs.map((item, i) => {
-            const isOpen = open === i;
-            return (
-              <div key={item.q} className="overflow-hidden rounded-2xl border border-border bg-card">
-                <button
-                  type="button"
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  aria-expanded={isOpen}
-                  className="grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-5 text-left"
+          {faqs.map((item, i) => (
+            <details
+              key={item.q}
+              open={i === 0}
+              className="group overflow-hidden rounded-2xl border border-border bg-card"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5">
+                <span
+                  className="text-[16.5px] leading-snug font-bold text-foreground"
+                  style={{ fontFamily: "var(--font-display)" }}
                 >
-                  <span
-                    className="text-[16.5px] leading-snug font-bold text-foreground"
-                    style={{ fontFamily: "var(--font-display)" }}
-                  >
-                    {item.q}
-                  </span>
-                  <ChevronDown
-                    className={`size-5 shrink-0 text-brand-clay transition-transform ${isOpen ? "rotate-180" : ""}`}
-                    aria-hidden
-                  />
-                </button>
-                {isOpen && (
-                  <p className="px-6 pb-6 text-[15px] leading-relaxed text-muted-foreground">{item.a}</p>
-                )}
-              </div>
-            );
-          })}
+                  {item.q}
+                </span>
+                <ChevronDown
+                  className="size-5 shrink-0 text-brand-clay transition-transform group-open:rotate-180"
+                  aria-hidden
+                />
+              </summary>
+              <p className="px-6 pb-6 text-[15px] leading-relaxed text-muted-foreground">{item.a}</p>
+            </details>
+          ))}
         </div>
 
         <div className="mt-12 flex flex-wrap items-center gap-4 rounded-3xl bg-surface-mist p-8">

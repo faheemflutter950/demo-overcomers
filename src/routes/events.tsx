@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Clock, MapPin } from "lucide-react";
 
 import { PageHero } from "@/components/site/PageHero";
+import { photos } from "@/data/photos";
 import { eventFilters, events } from "@/data/site-content";
 
 export const Route = createFileRoute("/events")({
@@ -32,6 +33,8 @@ function EventsPage() {
   return (
     <>
       <PageHero
+        image={photos.fellowshipMeal}
+        imageAlt="Church family gathered at a World Overcomers event"
         eyebrow="What's happening"
         title={
           <>

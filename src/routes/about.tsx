@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-import pastor from "@/assets/pastor-andy.png.asset.json";
+import { photos } from "@/data/photos";
 import { ministries } from "@/data/site-content";
 
 export const Route = createFileRoute("/about")({
@@ -79,7 +79,7 @@ function AboutPage() {
             </a>
           </div>
           <div className="overflow-hidden rounded-3xl bg-ink-deep">
-            <img src={pastor.url} alt="Pastor Andy Thompson" className="size-full object-cover" />
+            <img src={photos.pastorAndy} alt="Pastor Andy Thompson" className="size-full object-cover" />
           </div>
         </div>
       </section>

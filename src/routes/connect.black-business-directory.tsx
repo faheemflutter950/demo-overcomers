@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Search } from "lucide-react";
 
 import { PageHero } from "@/components/site/PageHero";
+import { photos } from "@/data/photos";
 
 export const Route = createFileRoute("/connect/black-business-directory")({
   head: () => ({
@@ -96,6 +97,8 @@ function DirectoryPage() {
   return (
     <>
       <PageHero
+        image={photos.businessBarber}
+        imageAlt="A Black-owned business owner at work"
         eyebrow="WOCC Black Business Directory"
         title="Circulate the dollar"
         intro="A growing directory of Black-owned businesses in the World Overcomers family. Shop, hire, and refer within the house."

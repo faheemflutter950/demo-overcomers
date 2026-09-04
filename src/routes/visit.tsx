@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { PageHero } from "@/components/site/PageHero";
+import { photos } from "@/data/photos";
 import { church } from "@/data/site-content";
 
 export const Route = createFileRoute("/visit")({
@@ -52,6 +53,8 @@ function VisitPage() {
   return (
     <>
       <PageHero
+        image={photos.welcomeTeam}
+        imageAlt="A welcome team member greeting guests at World Overcomers"
         eyebrow="We saved you a seat"
         title="Plan your visit"
         intro="First time? Here's everything you need to know before you walk through our doors this Sunday."
