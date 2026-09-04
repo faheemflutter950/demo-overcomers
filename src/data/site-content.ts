@@ -1,6 +1,4 @@
-import hangOn from "@/assets/sermon-hang-on.jpg.asset.json";
-import hotWater from "@/assets/sermon-hot-water.jpg.asset.json";
-import talkIt from "@/assets/sermon-talk-it.jpg.asset.json";
+import { photos } from "@/data/photos";
 
 export const church = {
   name: "World Overcomers Christian Church",
@@ -18,7 +16,7 @@ export const messages = [
     title: "Hang On, God is Moving",
     date: "June 14, 2026",
     speaker: "Pastor Andy Thompson",
-    image: hangOn.url,
+    image: photos.sermonVictory,
     excerpt:
       "In Habakkuk 2:2-4 and Exodus 13:17-22, we are reminded that God is still working even when the wait feels long.",
   },
@@ -26,7 +24,7 @@ export const messages = [
     title: "There's No Hot Water",
     date: "June 7, 2026",
     speaker: "Pastor Andy Thompson",
-    image: hotWater.url,
+    image: photos.sermonWorshipNight,
     excerpt:
       "A powerful message challenging us to examine the source of what truly sustains us through dry seasons.",
   },
@@ -34,7 +32,7 @@ export const messages = [
     title: "Talk it Like You Walk it",
     date: "May 31, 2026",
     speaker: "Pastor Andy Thompson",
-    image: talkIt.url,
+    image: photos.sermonChoir,
     excerpt:
       "Drawing from Matthew 6:9-13 and the Parable of the Two Sons — letting our walk match our words.",
   },

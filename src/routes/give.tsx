@@ -14,10 +14,7 @@ import {
   Smartphone,
 } from "lucide-react";
 
-import heroImg from "@/assets/worship-hero.jpg.asset.json";
-import serveImg from "@/assets/serve-city.jpg";
-import lobbyImg from "@/assets/welcome-lobby.jpg";
-import onlineImg from "@/assets/watch-online.jpg";
+import { photos } from "@/data/photos";
 import { church } from "@/data/site-content";
 
 export const Route = createFileRoute("/give")({
@@ -85,19 +82,19 @@ const waysToGive = [
 
 const impact = [
   {
-    image: serveImg,
+    image: photos.communityGiveaway,
     eyebrow: "Local Outreach",
     title: "Durham neighbors served",
     body: "Groceries, school supplies, utility assistance, and prayer for families across the Triangle every month.",
   },
   {
-    image: lobbyImg,
+    image: photos.lobbyCrowd,
     eyebrow: "Church Expansion",
     title: "Room for the next family",
     body: "Your giving funds our campus, kids and youth environments, and the teams that welcome first-time guests.",
   },
   {
-    image: onlineImg,
+    image: photos.praiseTeam,
     eyebrow: "Global Missions",
     title: "The message, everywhere",
     body: "Broadcast, digital ministry, and mission partnerships carry the faith message to more than 200 countries.",
@@ -155,7 +152,7 @@ function GiveHero() {
 
   return (
     <section className="relative overflow-hidden bg-ink text-on-ink">
-      <img src={heroImg.url} alt="" aria-hidden className="absolute inset-0 size-full object-cover opacity-25" />
+      <img src={photos.congregation} alt="" aria-hidden className="absolute inset-0 size-full object-cover opacity-25" />
       <div className="hero-scrim-side absolute inset-0" />
       <div className="shell relative grid items-center gap-12 pt-16 pb-16 md:pt-24 md:pb-24 lg:grid-cols-[1.05fr_1fr]">
         <div>

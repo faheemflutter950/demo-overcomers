@@ -1,12 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Play } from "lucide-react";
 
-import heroImg from "@/assets/worship-hero.jpg.asset.json";
-import lobbyImg from "@/assets/welcome-lobby.jpg";
-import onlineImg from "@/assets/watch-online.jpg";
-import serveImg from "@/assets/serve-city.jpg";
 import symbolBlack from "@/assets/wocc-symbol-black.png.asset.json";
 import { SectionHeading } from "@/components/site/PageHero";
+import { photos } from "@/data/photos";
 import { messages } from "@/data/site-content";
 
 export const Route = createFileRoute("/")({
@@ -35,7 +32,7 @@ const participate = [
     body: "Meet us in the house for an unforgettable morning of worship and Word.",
     cta: "Plan Visit",
     to: "/visit",
-    image: lobbyImg,
+    image: photos.lobbyWelcome,
   },
   {
     n: "02",
@@ -43,7 +40,7 @@ const participate = [
     body: "We're live every Sunday — join the Worship Experience from anywhere in the world.",
     cta: "Join Online",
     to: "/messages",
-    image: onlineImg,
+    image: photos.watchOnline,
   },
   {
     n: "03",
@@ -51,7 +48,7 @@ const participate = [
     body: "Take the church to the streets of Durham through outreach and community serve days.",
     cta: "Get Involved",
     to: "/connect/ministries",
-    image: serveImg,
+    image: photos.outreachServe,
   },
 ] as const;
 
@@ -83,7 +80,7 @@ function Home() {
       <section className="relative flex min-h-[86vh] items-end overflow-hidden bg-ink">
         <div className="absolute inset-0">
           <img
-            src={heroImg.url}
+            src={photos.heroWorship}
             alt="World Overcomers worship experience in Durham, NC"
             className="size-full object-cover object-[center_40%]"
           />
