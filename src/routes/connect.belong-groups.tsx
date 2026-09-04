@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Clock, MapPin, Users } from "lucide-react";
 
 import { PageHero } from "@/components/site/PageHero";
+import { photos } from "@/data/photos";
 
 export const Route = createFileRoute("/connect/belong-groups")({
   head: () => ({
@@ -71,6 +72,8 @@ function BelongGroupsPage() {
   return (
     <>
       <PageHero
+        image={photos.belongGroups}
+        imageAlt="A Belong Group meeting together"
         eyebrow="Belong Groups"
         title="You weren't meant to do life alone"
         intro="Belong Groups are small communities meeting all across the Triangle to grow together, pray together, and show up for each other."

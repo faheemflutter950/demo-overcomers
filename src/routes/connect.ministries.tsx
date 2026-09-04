@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { PageHero } from "@/components/site/PageHero";
+import { photos } from "@/data/photos";
 import { ministries } from "@/data/site-content";
 
 export const Route = createFileRoute("/connect/ministries")({
@@ -47,6 +48,8 @@ function MinistriesPage() {
   return (
     <>
       <PageHero
+        image={photos.families}
+        imageAlt="Families at World Overcomers Christian Church"
         eyebrow="Get Connected"
         title="Ministries at World Overcomers"
         intro="There's a place for every season of life. Jump into a ministry family and start doing life with people who are going your way."
