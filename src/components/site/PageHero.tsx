@@ -5,15 +5,26 @@ export function PageHero({
   title,
   intro,
   children,
+  image,
+  imageAlt = "",
 }: {
   eyebrow: string;
   title: ReactNode;
   intro?: string;
   children?: ReactNode;
+  image?: string;
+  imageAlt?: string;
 }) {
   return (
-    <section className="bg-ink text-on-ink">
-      <div className="shell pt-16 pb-14 md:pt-24 md:pb-20">
+    <section className="relative overflow-hidden bg-ink text-on-ink">
+      {image && (
+        <>
+          <img src={image} alt={imageAlt} className="absolute inset-0 size-full object-cover object-[center_35%]" />
+          <div className="hero-scrim absolute inset-0" />
+          <div className="hero-scrim-side absolute inset-0" />
+        </>
+      )}
+      <div className="shell relative pt-16 pb-14 md:pt-24 md:pb-20">
         <span className="eyebrow text-brand-sky">{eyebrow}</span>
         <h1 className="display-xl mt-4 max-w-4xl">{title}</h1>
         {intro && <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">{intro}</p>}
